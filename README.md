@@ -29,14 +29,12 @@ node --version
 mysql --version
 git --version
 ```
-## Struktur project
-.
-├── frontend/          # Flutter mobile application
-├── backend/           # Backend API (Node.js + Express)
-├── database/          # MySQL dump file
-│   └── coralis_auth.sql
-├── README.md
-└── .gitignore
+
+## Clone Repository
+```bash
+git clone https://github.com/fahriilman123/auth-app.git
+cd auth-app
+```
 
 ## Database setup
 ### 1. Create databases
@@ -45,11 +43,69 @@ CREATE DATABASE coralis_auth;
 ```
 
 ### 2. Import MySQL dump file
+```bash
 mysql -u root -p coralis_auth < database/coralis_auth.sql
+```
 
 ## Backend setup
 ### 1. Navigate to backend directory
+```bash
 cd backend
+```
 
 ### 2. Install dependecy
+```bash
 npm install
+```
+
+### 3. create environtment file
+```bash
+copy .env.example .env
+```
+
+### 4. Configure .env
+```bash
+PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_NAME=coralis_auth
+JWT_SECRET=your_jwt_secret
+```
+
+### 5. Run backend server
+```bash
+npm run dev
+```
+
+### Flutter setup
+### 1. Navigate to auth_app directory
+```bash
+cd auth_app
+```
+
+### 2. Install dependecy
+```bash
+flutter pub get
+```
+
+### 5. Run flutter app
+```bash
+flutter run
+```
+
+## Feature Implemented
+### Register
+* User registration using email and password
+* Passwords are stored using bcrypt hashing
+* User data is stored in MySQL
+
+### Login
+* Login using email and password
+* JWT-based authentication
+* Redirect to home/dashboard after successful login
+
+### Forgot Password
+* Request password reset using email
+* Backend generates a reset token
+* User can set a new password and login again
