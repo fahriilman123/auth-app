@@ -79,17 +79,19 @@ npm run dev
 ```
 
 ### Flutter setup
-### 1. Navigate to auth_app directory
+### 1. Run android emulator
+
+### 2. Navigate to auth_app directory
 ```bash
 cd auth_app
 ```
 
-### 2. Install dependecy
+### 3. Install dependecy
 ```bash
 flutter pub get
 ```
 
-### 5. Run flutter app
+### 4. Run flutter app
 ```bash
 flutter run
 ```
