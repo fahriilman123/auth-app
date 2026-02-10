@@ -40,7 +40,9 @@ git --version
 
 ## Database setup
 ### 1. Create databases
-``` CREATE DATABASE coralis_auth; ```
+```bash
+CREATE DATABASE coralis_auth;
+```
 
 ### 2. Import MySQL dump file
 mysql -u root -p coralis_auth < database/coralis_auth.sql
