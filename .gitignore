@@ -1,0 +1,21 @@
+# Flutter
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Node
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+
+# Android / iOS
+android/.gradle/
+android/local.properties
+ios/Pods/
+
+# OS
+.DS_Store
+Thumbs.db
